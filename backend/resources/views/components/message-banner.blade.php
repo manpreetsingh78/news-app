@@ -1,0 +1,1 @@
+<H1>I AM BANNER {{$msg}}</H1>
