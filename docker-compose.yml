@@ -13,7 +13,7 @@ services:
     environment:
       - ENV=local
     depends_on:
-      backend:
+      db:
         condition: service_healthy
     restart: unless-stopped
     networks:
@@ -41,7 +41,7 @@ services:
     command: >
       sh -c "php artisan config:cache &&
              php artisan migrate --force &&
-             php artisan articles:fetch &&
+             php artisan articles:fetch &
              php artisan serve --host=0.0.0.0 --port=8000"
     restart: unless-stopped
     networks:

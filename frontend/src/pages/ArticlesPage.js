@@ -51,7 +51,15 @@ export default function ArticlesPage() {
   }, [dispatch]);
 
   const handleSearch = () => {
+    setFilters({
+      source: null,
+      category: null,
+      author: null,
+      date: '',
+    });
+    setKeyword('');
     setCurrentPage(1);
+    setShowFilters(false);
     if (!keyword) return;
     dispatch(fetchArticles({ keyword, page: 1 }));
     sethasSearched(true)
