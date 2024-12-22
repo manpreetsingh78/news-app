@@ -4,6 +4,17 @@ Steps to Run the Project:-
 
 # Using Docker
 
+BACKEND
+### `cd news-app/backend`
+
+Install Dependencies
+### `composer install`
+
+FRONTEND
+### `cd news-app/frontend`
+
+### `npm install`
+
 ### `docker-compose.exe build`
 
 ### `docker-compose.exe up -d`
